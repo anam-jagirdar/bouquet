@@ -21,11 +21,14 @@ Every run is customizable:
 
 | Option | What it does | Default |
 | --- | --- | --- |
+| `--save PATH` | Write a GIF to this path instead of opening a window | none |
 | `--seed N` | A different layout and colour mix. Same seed, same bouquet. | 7 |
 | `--flowers N` | How many flowers. More flowers means a fuller bouquet. | 7 |
 | `--size X` | Flower size multiplier. 1.2 makes every flower 20% bigger. | 1.0 |
 | `--frames N` | Frames in one full animation | 150 |
 | `--fps N` | Frames per second | 30 |
+
+The 2D version saves with `--save`. The 3D version below saves with `--gif`.
 
 For a fuller, bigger bouquet, try `python -m bouquet --flowers 11 --size 1.1`. Flowers are kept inside the frame, and bunches of more than 8 get a third row of heights so they stay layered instead of colliding.
 
@@ -113,4 +116,4 @@ python -m unittest discover -v
 - Add a fourth flower type (a tulip or sunflower) in `flowers.py` and add it to `DRAWERS`
 - Change the palette, background or wrapping colours at the top of `scene.py`
 - Add a falling-petals effect after the bloom
-- Add a `--message` option that writes a name or greeting on the ribbon
+- Add a ribbon text option to the 2D version, like the `--message` caption the 3D version already has
